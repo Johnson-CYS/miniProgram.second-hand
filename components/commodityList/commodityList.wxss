@@ -1,0 +1,62 @@
+/* 商品列表 */
+
+.commodityList {
+  /* border: 1px solid blue; */
+}
+
+/* 单个商品 */
+
+.commodity {
+  display: flex;
+  border: 5rpx solid #dbdbdb;
+  opacity: 0.9;
+  box-shadow: 3rpx 3rpx 5rpx #dbdbdb;
+  border-radius: 10rpx;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30rpx 30rpx;
+  padding: 30rpx;
+  background-color: white;
+
+  /* color: #99999e; */
+}
+
+/* 商品封面 */
+
+.cover {
+  display: flex;
+}
+
+.coverImage {
+  width: 150rpx;
+  height: 150rpx;
+  /* border: 1px solid green; */
+  margin: auto 0;
+}
+
+/* 商品详细信息 */
+
+.commodityInfo {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 30rpx;
+  /* border: 1px solid green; */
+}
+
+.leftColumn {
+  flex: 1;
+}
+
+.rightColumn {
+  flex: 1;
+}
+
+/* 具体名称、价格、日期、类型 */
+
+.commodityName, .commodityPrice, .commodityDate, .commodityType {
+  display: flex;
+  align-items: center;
+  margin: 50rpx 0;
+  font-size: 30rpx;
+}

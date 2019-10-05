@@ -1,0 +1,42 @@
+<!-- 商品列表 -->
+<view class="commodityList">
+123
+  <!-- 单个商品 -->
+  <view class="commodity" id="commodity{{index}}" wx:for="{{commidtyListInfo}}" wx:key="{{index}}" wx:for-item="info">
+    <!-- 单个商品封面 -->
+    <view class="cover">
+      <image class="coverImage" src="{{info.photo1}}"></image>
+    </view>
+    <!-- 单个商品信息 -->
+    <view class="commodityInfo">
+
+      <!-- 左列 -->
+      <view class="leftColumn">
+        <!-- 单个商品名称 -->
+        <view class="commodityName">
+          <image class="icon" src="../../icons/commodity.png"></image>
+          <view class="text">{{info.name}}</view>
+        </view>
+        <!-- 单个商品发布日期 -->
+        <view class="commodityDate">
+          <image class="icon" src="../../icons/date.png"></image>
+          <view class="text">{{info.date}}</view>
+        </view>
+      </view>
+
+      <!-- 右列 -->
+      <view class="rightColumn">
+        <!-- 单个商品价格 -->
+        <view class="commodityPrice">
+          <image class="icon" src="../../icons/price.png"></image>
+          <view class="text">{{info.price}}</view>
+        </view>
+        <!-- 单个商品类型 -->
+        <view class="commodityType">
+          <image class="icon" src="../../icons/type.png"></image>
+          <view class="text">{{info.type}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
