@@ -1,0 +1,49 @@
+/* 照片展示 */
+
+.top image {
+  width: 50%;
+}
+
+swiper-item {
+  display: flex;
+  justify-content: center;
+}
+
+/* 信息展示 */
+
+.middle {
+  margin: 80rpx 30rpx 30rpx 30rpx;
+  padding: 30rpx;
+  background-color: white;
+  box-shadow: 5rpx 5rpx 10rpx #dbdbdb;
+  height: 500rpx;
+}
+
+.middle .section {
+  display: flex;
+  padding: 10rpx;
+  border-bottom: 3rpx solid #f8f8f8;
+  align-items: center;
+}
+
+/* 底部按钮 */
+
+.bottomCover {
+  width: 100%;
+  position: relative;
+  bottom: -50rpx;
+}
+
+.bottom {
+  display: flex;
+  justify-content: space-around;
+  margin: 30rpx;
+  padding: 10rpx;
+  background-color: #2c2c2c;
+  border-radius: 15rpx 15rpx 0rpx 0rpx;
+}
+
+.bottom image {
+  width: 50rpx;
+  height: 50rpx;
+}

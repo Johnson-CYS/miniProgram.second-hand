@@ -1,0 +1,64 @@
+<!-- 页头 -->
+<view class="heeader">
+  <view class="location">珠海校区</view>
+  <view class="search">
+    <image id="searchIcon" src="../../icons/search.png"></image>
+    <input bindinput="searchInput" bindconfirm="searchConfirm" type="text" placeholder="搜索" placeholder-style="color:white;"></input>
+  </view>
+</view>
+
+<!-- 轮播图 -->
+<swiper class="swiperList" indicator-dots autoplay circular>
+  <swiper-item class="swiperImage{{index}}" wx:for="{{swiperImage}}" wx:key="{{index}}" wx:for-item="photo">
+    <image bindtap="" src="{{photo}}"></image>
+  </swiper-item>
+</swiper>
+
+<!-- 分类目录 -->
+<view class="typeList">
+  <view class="typeImage" wx:for="{{typeImage}}" wx:key="{{index}}" wx:for-item="item">
+    <image bindtap="{{item.typeSearch}}" class="typeImage{{index}}" src="{{item.imgSrc}}"></image>
+  </view>
+</view>
+
+<!-- 商品列表 -->
+<view class="commodityList">
+  <!-- 单个商品 -->
+  <navigator role="navigation" open-type="navigate" url="../commodity/commodity?uniqueID={{info.uniqueID}}&name={{info.name}}&type={{info.type}}&price={{info.price}}&detail={{info.detail}}&publisherName={{info.publisherName}}&publisherContact={{info.publisherContact}}&photo1={{info.photo1}}&photo2={{info.photo2}}&photo3={{info.photo3}}"  class="commodity" id="commodity{{index}}" wx:for="{{commidtyListInfo}}" wx:key="{{index}}" wx:for-item="info">
+    <!-- 单个商品封面 -->
+    <view class="cover">
+      <image class="coverImage" src="{{info.photo1}}"></image>
+    </view>
+    <!-- 单个商品信息 -->
+    <view class="commodityInfo">
+
+      <!-- 左列 -->
+      <view class="leftColumn">
+        <!-- 单个商品名称 -->
+        <view class="commodityName">
+          <image class="icon" src="../../icons/commodity.png"></image>
+          <view class="text">{{info.name}}</view>
+        </view>
+        <!-- 单个商品发布日期 -->
+        <view class="commodityDate">
+          <image class="icon" src="../../icons/date.png"></image>
+          <view class="text">{{info.date}}</view>
+        </view>
+      </view>
+
+      <!-- 右列 -->
+      <view class="rightColumn">
+        <!-- 单个商品价格 -->
+        <view class="commodityPrice">
+          <image class="icon" src="../../icons/price.png"></image>
+          <view class="text">{{info.price}}</view>
+        </view>
+        <!-- 单个商品类型 -->
+        <view class="commodityType">
+          <image class="icon" src="../../icons/type.png"></image>
+          <view class="text">{{info.type}}</view>
+        </view>
+      </view>
+    </view>
+  </navigator>
+</view>

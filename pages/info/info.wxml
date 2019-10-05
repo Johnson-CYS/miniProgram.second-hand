@@ -1,0 +1,28 @@
+<!-- 用户授权登陆 -->
+<view wx:if="{{!hasUserInfo}}" class="getUserInfo">
+  <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称</button>
+</view>
+<view wx:else class="userInfo">
+  <view class="left">
+    <image bindtap="bindViewTap" class="userInfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <text class="userInfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <view class="right"> 已授权</view>
+</view>
+
+<!-- 功能列表 -->
+<view class="functionList">
+  <!-- 收藏记录 -->
+  <navigator url="../star/star" class="section" id="collectionRecord">
+    <image class="icon_left" src="../../icons/collection-selected.png"></image>
+    <view class="name">收藏记录</view>
+    <image class="icon_right" src="../../icons/arrow-right.png"></image>
+  </navigator>
+
+  <!-- 出售记录 -->
+  <navigator url="../sales/sales" class="section" id="salesRecord">
+    <image class="icon_left" src="../../icons/sales-selected.png"></image>
+    <view class="name">出售记录</view>
+    <image class="icon_right" src="../../icons/arrow-right.png"></image>
+  </navigator>
+</view>

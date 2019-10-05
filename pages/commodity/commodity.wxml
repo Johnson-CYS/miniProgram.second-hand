@@ -1,0 +1,42 @@
+<!-- 照片展示 -->
+<swiper style="height:{{imgHeight}}px" class="top" indicator-dots autoplay circular>
+  <swiper-item wx:for="{{photo}}" wx:key="{{index}}">
+    <image bindload="imgHeight" class="imgList" src="{{item}}" mode="widthFix"></image>
+  </swiper-item>
+</swiper>
+
+<!-- 信息展示 -->
+<view class="middle">
+  <view class="section" id="name">
+    <image src="../../icons/commodity.png"></image>
+    <view>{{name}}</view>
+  </view>
+  <view class="section" id="price">
+    <image src="../../icons/price.png"></image>
+    <view>{{price}}</view>
+  </view>
+  <view class="section" id="type">
+    <image src="../../icons/type.png"></image>
+    <view>{{type}}</view>
+  </view>
+  <view class="section" id="publisherName">
+    <image src="../../icons/info.png"></image>
+    <view>{{publisherName}}</view>
+  </view>
+  <view class="section" id="detail">
+    <image src="../../icons/detail.png"></image>
+    <view>{{detail}}</view>
+  </view>
+</view>
+
+<!-- 底部按钮 -->
+<view class="bottomCover">
+  <view class="bottom">
+    <view class="section" id="star" bindtap="star">
+      <image src="{{starBool?starImg[0]:starImg[1]}}"></image>
+    </view>
+    <view class="section" id="contact" bindtap="copy">
+      <image src="../../icons/weixin.png"></image>
+    </view>
+  </view>
+</view>

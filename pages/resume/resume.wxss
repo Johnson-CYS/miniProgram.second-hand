@@ -1,0 +1,70 @@
+/* 总体 */
+
+#resume {
+  font-size: 28rpx;
+  margin: 30rpx;
+  line-height: 50rpx;
+  font-family: Microsoft YaHei;
+}
+
+/* block边框 */
+
+.info {
+  border: 3rpx solid #e2e4e7;
+  border-radius: 15rpx;
+  margin-bottom: 15rpx;
+  box-shadow: 5rpx 5rpx 10rpx #e2e4e7;
+}
+
+.details {
+  border: 3rpx solid #e2e4e7;
+  border-radius: 15rpx;
+  margin-bottom: 15rpx;
+}
+
+/* 个人信息 */
+
+.infoContent {
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx;
+  color: #9a9a9a;
+}
+
+/* 头像 */
+
+.avatar {
+  width: 170rpx;
+}
+
+/* 所有标题 */
+
+.titles {
+  font-weight: bold;
+  border-bottom: 3rpx solid #00c98f;
+}
+
+/* 所有职位 */
+
+.ocupation {
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  padding: 10rpx;
+  font-size: 25rpx;
+}
+
+/* 所有内容 */
+
+.content {
+  padding: 10rpx;
+  color: #9a9a9a;
+}
+
+.content view::before {
+  content: "@";
+}
+
+.content view::after {
+  content: ".";
+}

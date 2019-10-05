@@ -1,0 +1,45 @@
+/* 用户授权登陆 */
+.userInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 35rpx;
+  margin: 30rpx;
+  padding: 30rpx;
+}
+.userInfo view {
+  display: flex;
+  align-items: center;
+}
+.userInfo image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.right{
+  background-color: #2c2c2c;
+  color: white;
+  font-size: 30rpx;
+  padding: 10rpx;
+  border-radius: 10rpx;
+}
+/* 功能列表 */
+.functionList{
+  margin: 30rpx;
+  padding: 10rpx;
+  background-color: white;
+}
+.functionList image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.section {
+  display: flex;
+  align-items: center;
+  margin: 30rpx;
+  padding: 10rpx;
+  border-bottom: 3rpx solid #f8f8f8; 
+}
+.icon_right{
+  /* border: 3rpx solid red; */
+  margin-left: 400rpx;
+}

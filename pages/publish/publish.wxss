@@ -1,0 +1,80 @@
+/* 总体 */
+
+image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+switch {
+  zoom: 0.8;
+}
+
+button {
+  width: 50%;
+  background-color: #2c2c2c;
+  color: white;
+  margin-top: 100rpx;
+}
+
+button:active {
+  background-color: #dbdbdb;
+  color: white;
+}
+
+input {
+  /* border: 3rpx solid red; */
+  width: 80%;
+  }
+
+/* 标题 */
+
+.title {
+  display: flex;
+  align-items: center;
+  margin: 20rpx;
+  padding: 10rpx;
+  /* border-bottom: 5rpx solid #2c2c2c; */
+  background-color: #2c2c2c;
+  color: white;
+  border-radius: 10rpx;
+  width: 175rpx;
+}
+
+.title view {
+  margin-left: 10rpx;
+}
+
+/* 信息部件 */
+
+.section {
+  display: flex;
+  align-items: center;
+  margin: 30rpx;
+  background-color: white;
+  border-radius: 10rpx;
+}
+
+/* 信息部件-left */
+
+.tag {
+  padding: 10rpx;
+  width: 15%;
+}
+
+/* 信息部件-right */
+.picker {
+  width: 500rpx;
+  display: flex;
+  align-items: center;
+  text-align: right;
+}
+
+.section picker image {
+  width: 30rpx;
+  height: 30rpx;
+  /* border: 1px solid red; */
+}
+
+.section switch {
+  text-align: right;
+}

@@ -1,0 +1,79 @@
+<!--表单填写-->
+<form class="form">
+
+  <!--商品信息-->
+  <view class="commodityInfo">
+    <view class="title">
+      <image src="../../icons/goods.png"></image>
+      <view> 商品信息</view>
+    </view>
+    <!-- 商品名称 -->
+    <view class="section" id="commodityName" style="{{wrongNameStyle}}">
+      <view class="tag">名称</view>
+      <input class="input" type="text" maxlength="7" placeholder="{{nameBool?'必填':'请输入名称'}}" value="{{nameValue}}" bindinput="nameInput"></input>
+    </view>
+
+    <!-- 商品类别 -->
+    <view class="section" id="commodityType">
+      <view class="tag">类别</view>
+      <picker bindchange="bindPickerChange" range="{{type}}" value="{{typeIndex}}" value="{{typeValue}}">
+        <view class="picker">
+          <view>{{type[typeIndex]}}</view>
+          <image src="../../icons/down.png"></image>
+        </view>
+      </picker>
+    </view>
+
+    <!-- 商品封面 -->
+    <view class="section" id="commodityPhoto" style="{{wrongPhotoStyle}}">
+      <view class="tag">封面</view>
+      <image class="photo" src="../../icons/photo.png" bindtap="photoReserve"></image>
+      <view class="wrong">{{wrongPhoto}}</view>
+      <view class="photo">
+        <image bindtap="deleteImage" id="{{index}}" wx:for="{{result}}" src="{{item}}"></image>
+      </view>
+    </view>
+
+    <!-- free按钮 -->
+    <view class="section" id="ifIsFree">
+      <view class="tag">free</view>
+      <switch bindchange="bindSwitchChange" class="commodityFree" color="#2c2c2c"></switch>
+    </view>
+
+    <!-- 商品价格 -->
+    <view class="section" id="commodityPrice" hidden="{{free?true:false}}" style="{{wrongPriceStyle}}">
+      <view class="tag">价格</view>
+      <input class="input" type="number" placeholder="{{priceBool?'必填':'请输入价格'}}" value="{{priceValue}}" bindinput="priceInput"></input>
+    </view>
+
+    <!-- 商品详情 -->
+    <view class="section" id="commodityDetail">
+      <view class="tag">详情</view>
+      <textarea class="input" placeholder="选填" value="{{detailValue}}" bindinput="detailInput"></textarea>
+    </view>
+  </view>
+
+  <!-- 商家信息 -->
+  <view class="publisherInfo">
+    <view class="title">
+      <image src="../../icons/shop.png"></image>
+      <view> 商家信息</view>
+    </view>
+    <!-- 发布者姓名 -->
+    <view class="section" id="publisherName">
+      <view class="tag">微信名</view>
+      <input class="input" placeholder="选填" value="{{publisherNameValue}}" bindinput="publisherNameInput"></input>
+
+
+    </view>
+    <!-- 发布者联系方式 -->
+    <view class="section" id="publisherContact" style="{{wrongPublisherContactStyle}}">
+      <view class="tag">微信号</view>
+      <input class="input" placeholder="{{publisherContactBool?'必填':'请输入微信号'}}" value="{{publisherContactValue}}" bindinput="publisherContactInput"></input>
+
+    </view>
+  </view>
+
+  <!-- 发布按钮 -->
+  <button class="publish" bindtap="formCheck" bindtouchend="formSubmit">发布商品信息</button>
+</form>
