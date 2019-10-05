@@ -1,0 +1,11 @@
+/**app.wxss**/
+
+image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+page{
+  font-size: 30rpx;
+  background-color: #f8f8f8;
+}

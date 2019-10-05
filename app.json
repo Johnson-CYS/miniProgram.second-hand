@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/info/info",
+    "pages/publish/publish",
+    "pages/commodity/commodity",
+    "pages/sales/sales",
+    "pages/star/star",
+    "pages/update/update",
+    "pages/resume/resume"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#f8f8f8",
+    "navigationBarTitleText": "暨大二手交易君",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "",
+        "iconPath": "icons/homepage-unselected.png",
+        "selectedIconPath": "icons/homepage-selected.png"
+      },
+      {
+        "pagePath": "pages/publish/publish",
+        "text": "",
+        "iconPath": "icons/sales-unselected.png",
+        "selectedIconPath": "icons/sales-selected.png"
+      },
+      {
+        "pagePath": "pages/info/info",
+        "text": "",
+        "iconPath": "icons/info-unselected.png",
+        "selectedIconPath": "icons/info-selected.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
